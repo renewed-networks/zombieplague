@@ -41,14 +41,9 @@ function WeaponManager:SearchWeapons()
 end
 
 function WeaponManager:ServerHasWeapon(WeaponClass)
-	for k, Weapon in pairs(self.ServerWeapons) do
-		if Weapon == WeaponClass then
-			return true
-		end
-	end
-
-	return false
+	return table.HasValue(self.ServerWeapons, WeaponClass)
 end
+
 function WeaponManager:IsChoosableWeapon(Weap)
 	for k, Weapon in pairs(self.PrimaryWeapons) do
 		if Weapon.WeaponID == Weap then

@@ -1,4 +1,4 @@
-RoundManager = {}
+RoundManager = RoundManager || {}
 
 function RoundManager:SetSpecialRound(SpecialRound)
 	SetGlobalBool("SpecialRound", SpecialRound)
@@ -30,11 +30,10 @@ end
 function RoundManager:LastHuman()
 	local i = 0
 	for _, ply in ipairs(team.GetPlayers(TEAM_HUMANS)) do
-		if ply:Alive() then
-			i = i + 1
-			if i > 1 then
-				return false
-			end
+		if not ply:Alive() then continue end
+		i = i + 1
+		if i > 1 then
+			return false
 		end
 	end
 	return i == 1
@@ -42,11 +41,10 @@ end
 function RoundManager:LastZombie()
 	local i = 0
 	for _, ply in ipairs(team.GetPlayers(TEAM_ZOMBIES)) do
-		if ply:Alive() then
-			i = i + 1
-			if i > 1 then
-				return false
-			end
+		if not ply:Alive() then continue end
+		i = i + 1
+		if i > 1 then
+			return false
 		end
 	end
 	return i == 1
@@ -70,36 +68,32 @@ end
 function RoundManager:CountHumansAlive()
 	local i = 0
 	for _, ply in ipairs(team.GetPlayers(TEAM_HUMANS)) do
-		if ply:Alive() then
-			i = i + 1
-		end
+		if not ply:Alive() then continue end
+		i = i + 1
 	end
 	return i
 end
 function RoundManager:CountZombiesAlive()
 	local i = 0
 	for _, ply in ipairs(team.GetPlayers(TEAM_ZOMBIES)) do
-		if ply:Alive() then
-			i = i + 1
-		end
+		if not ply:Alive() then continue end
+		i = i + 1
 	end
 	return i
 end
 function RoundManager:GetAliveHumans()
 	local AliveHumans = {}
 	for i, ply in ipairs(team.GetPlayers(TEAM_HUMANS)) do
-		if ply:Alive() then
-			table.insert(AliveHumans, ply)
-		end
+		if not ply:Alive() then continue end
+		table.insert(AliveHumans, ply)
 	end
 	return AliveHumans
 end
 function RoundManager:GetAliveZombies()
 	local AliveZombies = {}
 	for i, ply in ipairs(team.GetPlayers(TEAM_ZOMBIES)) do
-		if ply:Alive() then
-			table.insert(AliveZombies, ply)
-		end
+		if not ply:Alive() then continue end
+		table.insert(AliveZombies, ply)
 	end
 	return AliveZombies
 end

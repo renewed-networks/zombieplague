@@ -93,58 +93,58 @@ ZombieSuffocateSound = {"player/pl_pain5.wav",
 NIGHTVISION_ON_SOUND = "zombieplague/nightvision.mp3"
 NIGHTVISION_OFF_SOUND = "zombieplague/nightvision.mp3"
 
-for k, SoundPath in pairs(ZombieKnifeSound) do
+for i, SoundPath in ipairs(ZombieKnifeSound) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(ZombieMadnessSounds) do
+for i, SoundPath in ipairs(ZombieMadnessSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(FallDamageSounds) do
+for i, SoundPath in ipairs(FallDamageSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(BurnDamageSounds) do
+for i, SoundPath in ipairs(BurnDamageSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(GenericDamageSounds) do
+for i, SoundPath in ipairs(GenericDamageSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(InfectionSounds) do
+for i, SoundPath in ipairs(InfectionSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(CureSounds) do
+for i, SoundPath in ipairs(CureSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(HumanWinSounds) do
+for i, SoundPath in ipairs(HumanWinSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(ZombieWinSounds) do
+for i, SoundPath in ipairs(ZombieWinSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(DrawSounds) do
+for i, SoundPath in ipairs(DrawSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(ZombieDeathSounds) do
+for i, SoundPath in ipairs(ZombieDeathSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(HumanTaunts) do
+for i, SoundPath in ipairs(HumanTaunts) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(NemesisDamageSounds) do
+for i, SoundPath in ipairs(NemesisDamageSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(ZombieIdle) do
+for i, SoundPath in ipairs(ZombieIdle) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(HumanDrownSounds) do
+for i, SoundPath in ipairs(HumanDrownSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(ZombieDrownSounds) do
+for i, SoundPath in ipairs(ZombieDrownSounds) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(HumanSuffocateSound) do
+for i, SoundPath in ipairs(HumanSuffocateSound) do
 	resource.AddFile("sound/" .. SoundPath)
 end
-for k, SoundPath in pairs(ZombieSuffocateSound) do
+for i, SoundPath in ipairs(ZombieSuffocateSound) do
 	resource.AddFile("sound/" .. SoundPath)
 end
 

@@ -17,7 +17,7 @@ function OptionMenu:CreateOptionsMenu()
 		HudManager:CreateBox(2, 4, Color(36, 36, 36), Color(145, 145, 145), 0, 0, Width, Height)
 	end
 	function DOptionMenu:OnClose()
-		for k, Popups in pairs(OptionMenu.WarningPopups) do
+		for i, Popups in ipairs(OptionMenu.WarningPopups) do
 			if Popups.Close then
 				Popups:Close()
 			end
